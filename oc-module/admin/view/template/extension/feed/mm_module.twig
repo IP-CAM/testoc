@@ -30,29 +30,29 @@
                   <div class="required">
                       
                       <div class="col-sm-10">
-                        <input type="text" name="product_description[1][name]" value="" placeholder="Product Name" id="input-name1" class="form-control">
+                        <input type="text" name="product_description[{{language.language_id}}][name]" value="" placeholder="Product Name" id="input-name1" class="form-control">
                          </div>
                     </div>
 
                       <div class="required">
                      
                       <div class="col-sm-10">
-                        <input type="text" name="product_description[1][name]" value="" placeholder="Product Name" id="input-name1" class="form-control">
+                        <input type="text" name="product_description[{{language.language_id}}][meta_title]" value="" placeholder="Meta Title" id="input-meta-title1" class="form-control">
                          </div>
                     </div>
-                      <div class="required">
-                    
-                      <div class="col-sm-10">
-                        <input type="text" name="product_description[1][name]" value="" placeholder="Product Name" id="input-name1" class="form-control">
-                         </div>
-                    </div>
-
-
 
               </div>
             </div>
             <br> 
           {% endfor %}
+
+            <div class="required">
+                    
+                      <div class="col-sm-10">
+                        <input type="text" name="model" value="" placeholder="Model" id="input-model" class="form-control">
+                         </div>
+                    </div>
+
          <button type="submit" form="form-feed" data-toggle="tooltip" title="{{ button_save }}" class="btn btn-primary"><i class="fa fa-save"></i></button>
 
        </form>

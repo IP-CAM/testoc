@@ -10,15 +10,17 @@ class ControllerExtensionFeedMmModule extends Controller {
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$this->load->model('setting/setting');
+		$this->load->model('extension/feed/mm_module');
 		$this->load->model('localisation/language');
 
 
 		if(($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()){
-			$this->model_catalog_product->addProduct($this->request->post);
+			$this->model_extension_feed_mm_module->addProduct($this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_success');
-
-
+			echo "<pre>";
+				print_r($this->request->post);
+			echo "</pre>";
 		}
 
 		if (isset($this->error['warning'])) {
